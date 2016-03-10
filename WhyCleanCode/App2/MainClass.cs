@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace App2
 {
+    /// <summary>
+    /// 追加条件（１）を実装
+    /// </summary>
     public class MainClass
     {
         /// <summary>
