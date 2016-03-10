@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace App1
 {
     public class MainClass
     {
-
         /// <summary>
         /// 入場者タイプごとの入場料を取得
         /// </summary>
