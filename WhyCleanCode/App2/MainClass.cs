@@ -24,19 +24,13 @@ namespace App2
             switch (personType)
             {
                 case PersonType.大人:
-                    if (clock.IsEvening())
-                        return 700;  //夕方
-                    return 1000;
+                    return clock.IsEvening() ? 700 : 1000;//夕方料金：通常料金
 
                 case PersonType.学生:
-                    if (clock.IsEvening())
-                        return 400;  //夕方
-                    return 700;
+                    return clock.IsEvening() ? 400 : 700;//夕方料金：通常料金
 
                 case PersonType.子供:
-                    if (clock.IsEvening())
-                        return 200;  //夕方
-                    return 500;
+                    return clock.IsEvening() ? 200 : 500;//夕方料金：通常料金
 
                 default:
                     //該当する入場者タイプが無い場合
