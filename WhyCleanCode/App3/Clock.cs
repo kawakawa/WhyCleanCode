@@ -9,16 +9,16 @@ namespace App3
     /// <summary>
     /// ドメイン時計
     /// </summary>
-    internal class Clock
+    public class Clock
     {
         private readonly DateTime _dateTime;
 
-        internal Clock()
+        public Clock()
         {
             _dateTime = DateTime.Now;
         }
 
-        internal Clock(DateTime dateTime)
+        public Clock(DateTime dateTime)
         {
             _dateTime = dateTime;
         }
@@ -28,7 +28,7 @@ namespace App3
         /// 時計が夕方帯なのか取得します（16時～）
         /// </summary>
         /// <returns></returns>
-        internal bool IsEvening()
+        public bool IsEvening()
         {
             //16時以降は夕方とします
             return _dateTime.Hour >= 16;
