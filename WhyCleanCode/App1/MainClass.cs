@@ -8,6 +8,7 @@ namespace App1
 {
     /// <summary>
     /// 基本情報を実装
+    /// (トランザクションスクリプト版）
     /// </summary>
     public class MainClass
     {

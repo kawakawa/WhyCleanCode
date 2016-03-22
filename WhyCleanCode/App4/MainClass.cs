@@ -8,6 +8,7 @@ namespace App4
 {
     /// <summary>
     /// 追加条件（3）を実装
+    /// (トランザクションスクリプト版）
     /// </summary>
     public class MainClass
     {
