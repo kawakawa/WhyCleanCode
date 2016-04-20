@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clock.cs" />
-    <Compile Include="ComplimentaryTicket.cs" />
+    <Compile Include="ComplimentaryTickets.cs" />
     <Compile Include="MainClass.cs" />
     <Compile Include="PersonType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

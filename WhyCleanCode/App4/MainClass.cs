@@ -17,16 +17,16 @@ namespace App4
         /// </summary>
         /// <param name="personType">入場者タイプ</param>
         /// <param name="clock">ドメイン時計</param>
-        /// <param name="complimentaryTicket">優待チケット情報</param>
+        /// <param name="complimentaryTickets">優待チケット情報</param>
         /// <returns>入場料</returns>
-        public int AdmissionFee(PersonType personType, Clock clock, ComplimentaryTicket complimentaryTicket)
+        public int AdmissionFee(PersonType personType, Clock clock, ComplimentaryTickets complimentaryTickets)
         {
 
             //優待チケットがある場合
-            if (complimentaryTicket.HasTicket())
+            if (complimentaryTickets.HasTicket())
             {
                 //手持ちの優待チケットを1枚減らす
-                complimentaryTicket.DecreaseNumberOfRemainingTicket(1);
+                complimentaryTickets.DecreaseNumberOfRemainingTicket(1);
 
                 //入場料は無料
                 return 0;

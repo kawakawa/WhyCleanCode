@@ -9,7 +9,7 @@ namespace App4
     /// <summary>
     /// 優待チケット情報
     /// </summary>
-    public class ComplimentaryTicket
+    public class ComplimentaryTickets
     {
         /// <summary>
         /// 手持ちの残枚数
@@ -20,7 +20,7 @@ namespace App4
         /// 
         /// </summary>
         /// <param name="numberOfTickets">手持ちのチケット枚数</param>
-        public ComplimentaryTicket(int numberOfTickets)
+        public ComplimentaryTickets(int numberOfTickets)
         {
             _numberOfRemaining = numberOfTickets;
         }
