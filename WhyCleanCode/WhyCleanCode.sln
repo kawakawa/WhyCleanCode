@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1", "App1\App1.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App2", "App2\App2.csproj", "{8DDA2104-BFFA-45C0-B06F-EECAA03AD6C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App2-2", "App2-2\App2-2.csproj", "{DBD08A66-9473-4F1C-B4B9-F3251BC9D06C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App2_2", "App2-2\App2_2.csproj", "{DBD08A66-9473-4F1C-B4B9-F3251BC9D06C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App3", "App3\App3.csproj", "{124D770A-A8C2-488B-8223-9EB9C5945DA4}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App5", "App5\App5.csproj", "{CAE560D7-E2F4-4095-8B67-BD571E4E1709}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1_2", "App1_2\App1_2.csproj", "{C061B81D-5516-43FB-873D-6464A0C30EA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App3_2", "App3_2\App3_2.csproj", "{4DB62733-D7F2-48A9-BDC9-2DD8BE4E7DDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{C061B81D-5516-43FB-873D-6464A0C30EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C061B81D-5516-43FB-873D-6464A0C30EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C061B81D-5516-43FB-873D-6464A0C30EA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB62733-D7F2-48A9-BDC9-2DD8BE4E7DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB62733-D7F2-48A9-BDC9-2DD8BE4E7DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB62733-D7F2-48A9-BDC9-2DD8BE4E7DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB62733-D7F2-48A9-BDC9-2DD8BE4E7DDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
