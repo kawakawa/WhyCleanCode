@@ -40,7 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdmissionFee\AdmissionFee.cs" />
+    <Compile Include="AdmissionFee\AdmissionFeeFactiory.cs" />
+    <Compile Include="AdmissionFee\Conditions\Clock\Clock.cs" />
+    <Compile Include="AdmissionFee\Conditions\Clock\ClockFactory.cs" />
+    <Compile Include="AdmissionFee\Conditions\Clock\IClock.cs" />
+    <Compile Include="AdmissionFee\Conditions\Conditions.cs" />
+    <Compile Include="AdmissionFee\Conditions\PersonType\IPersonType.cs" />
+    <Compile Include="AdmissionFee\Conditions\PersonType\PersonTypeFactory.cs" />
+    <Compile Include="AdmissionFee\Conditions\PersonType\大人.cs" />
+    <Compile Include="AdmissionFee\Conditions\PersonType\子供.cs" />
+    <Compile Include="AdmissionFee\Conditions\PersonType\学生.cs" />
+    <Compile Include="AdmissionFee\Policy\Policy.cs" />
+    <Compile Include="Clock.cs" />
     <Compile Include="MainClass.cs" />
+    <Compile Include="PersonType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
