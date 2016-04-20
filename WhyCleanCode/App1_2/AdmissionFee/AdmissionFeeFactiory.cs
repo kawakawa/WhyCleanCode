@@ -1,4 +1,4 @@
-﻿using App1_2.AdmissionFee.Conditons.PersonType;
+﻿using App1_2.AdmissionFee.Conditions.PersonType;
 
 namespace App1_2.AdmissionFee
 {
