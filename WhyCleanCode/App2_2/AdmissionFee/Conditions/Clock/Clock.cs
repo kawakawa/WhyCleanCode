@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace App2_2.AdmissionFee.Conditions.Clock
+﻿namespace App2_2.AdmissionFee.Conditions.Clock
 {
     internal class Clock : IClock
     {

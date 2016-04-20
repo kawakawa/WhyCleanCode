@@ -1,7 +1,4 @@
 ﻿using System;
-using App2_2.AdmissionFee.Conditions.Clock;
-using App2_2.AdmissionFee.Conditions.PersonType;
-using App2_2.AdmissionFee.Policy;
 
 namespace App2_2.AdmissionFee
 {

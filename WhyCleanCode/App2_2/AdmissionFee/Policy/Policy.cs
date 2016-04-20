@@ -1,5 +1,4 @@
-﻿using System;
-using App2_2.AdmissionFee.Conditions.Clock;
+﻿using App2_2.AdmissionFee.Conditions.Clock;
 using App2_2.AdmissionFee.Conditions.PersonType;
 
 namespace App2_2.AdmissionFee.Policy
@@ -28,7 +27,7 @@ namespace App2_2.AdmissionFee.Policy
         internal int GetFee(IPersonType personTypeCondition, IClock clock)
         {
             //夕刻の場合
-            if (clock.IsEvening() == true)
+            if (clock.IsEvening())
                 return personTypeCondition.EveningFee();
 
             return personTypeCondition.Fee();

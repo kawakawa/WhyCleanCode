@@ -1,5 +1,4 @@
-﻿using System;
-using App2_2.AdmissionFee.Conditions.Clock;
+﻿using App2_2.AdmissionFee.Conditions.Clock;
 using App2_2.AdmissionFee.Conditions.PersonType;
 
 namespace App2_2.AdmissionFee
