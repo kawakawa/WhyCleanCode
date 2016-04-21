@@ -18,9 +18,9 @@ namespace App5
         /// <param name="personType">入場者タイプ</param>
         /// <param name="clock">ドメイン時計</param>
         /// <param name="complimentaryTicket">優待チケット情報</param>
-        /// <param name="visitInfo">訪問情報</param>
+        /// <param name="visitHistory">訪問情報</param>
         /// <returns>入場料</returns>
-        public int AdmissionFee(PersonType personType, Clock clock, ComplimentaryTicket complimentaryTicket,VisitInfo visitInfo)
+        public int AdmissionFee(PersonType personType, Clock clock, ComplimentaryTicket complimentaryTicket,VisitHistory visitHistory)
         {
 
             //優待チケットがある場合
@@ -64,7 +64,7 @@ namespace App5
             var yesterDay = clock.GetDay(-1);
 
             //昨日も入場している場合
-            if (visitInfo.IsVisit(yesterDay))
+            if (visitHistory.IsVisit(yesterDay))
                 return admissionFee/2;  //入場料半額
 
             return admissionFee;

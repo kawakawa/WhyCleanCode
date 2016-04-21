@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 namespace App5
 {
     /// <summary>
-    /// 訪問情報
+    /// 訪問履歴
     /// </summary>
-    public class VisitInfo
+    public class VisitHistory
     {
         /// <summary>
-        /// 訪問履歴
+        /// 訪問時刻の履歴
         /// </summary>
         private List<DateTime> _visitDateTimes=new List<DateTime>();
-        
+
         /// <summary>
-        /// 訪問情報追加
+        /// 訪問時刻の履歴
         /// </summary>
         /// <param name="date"></param>
         public void Visit(DateTime date)
