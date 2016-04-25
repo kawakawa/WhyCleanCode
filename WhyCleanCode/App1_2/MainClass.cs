@@ -15,7 +15,7 @@ namespace App1_2
         /// <returns>入場料</returns>
         public int AdmissionFee(PersonType personType)
         {
-            //入場者を引数に入場料クラス生成
+            //入場料クラス生成
             var admissionFee = AdmissionFeeFactiory.Make(personType);
 
             //入場料取得
