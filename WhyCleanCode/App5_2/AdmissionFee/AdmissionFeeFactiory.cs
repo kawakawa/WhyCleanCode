@@ -18,6 +18,15 @@ namespace App5_2.AdmissionFee
             return new Conditions.Conditions();
         }
 
+        /// <summary>
+        /// ポリシークラス生成
+        /// </summary>
+        /// <returns></returns>
+        private static Policy.Policy PolicyFactory()
+        {
+            return new Policy.Policy();
+        }
+
 
         /// <summary>
         /// 入場料クラス生成
@@ -32,7 +41,7 @@ namespace App5_2.AdmissionFee
             conditions.PersonType = PersonTypeFactory.Make(personType);
 
             //入場料のポリシー作成
-            var policy = new Policy.Policy();
+            var policy = PolicyFactory();
 
             return new AdmissionFee(conditions, policy);
         }
@@ -55,10 +64,10 @@ namespace App5_2.AdmissionFee
 
             //時刻の条件作成
             conditions.Clock = ClockFactory.Make(clock);
-            
+
             //入場料のポリシー作成
-            var policy = new Policy.Policy();
-            
+            var policy = PolicyFactory();
+
             return new AdmissionFee(conditions, policy);
         }
 
@@ -83,7 +92,7 @@ namespace App5_2.AdmissionFee
             conditions.ComplimentaryTickets = ComplimentaryTicketsFactory.Make(complimentaryTickets);
 
             //入場料のポリシー作成
-            var policy = new Policy.Policy();
+            var policy = PolicyFactory();
 
             return new AdmissionFee(conditions, policy);
         }
@@ -114,7 +123,7 @@ namespace App5_2.AdmissionFee
             conditions.VisitHistory=VisitHistoryFactory.Make(visitHistory,clock);
 
             //入場料のポリシー作成
-            var policy = new Policy.Policy();
+            var policy = PolicyFactory();
 
             return new AdmissionFee(conditions, policy);
         }

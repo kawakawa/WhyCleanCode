@@ -4,6 +4,16 @@ namespace App1_2.AdmissionFee
 {
     internal class AdmissionFeeFactiory
     {
+
+        /// <summary>
+        /// ポリシークラス生成
+        /// </summary>
+        /// <returns></returns>
+        private static Policy.Policy PolicyFactory()
+        {
+            return new Policy.Policy();
+        }
+
         /// <summary>
         /// 入場料クラス生成
         /// </summary>
@@ -15,9 +25,12 @@ namespace App1_2.AdmissionFee
             var personTypeCondition = PersonTypeFactory.Make(personType);
             
             //入場料のポリシー作成
-            var policy = new Policy.Policy();
-            
+            var policy = PolicyFactory();
+
             return new AdmissionFee(personTypeCondition,policy);
         }
+
+
+
     }
 }
