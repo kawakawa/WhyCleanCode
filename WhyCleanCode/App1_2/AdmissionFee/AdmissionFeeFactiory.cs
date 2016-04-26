@@ -17,11 +17,7 @@ namespace App1_2.AdmissionFee
             //入場料のポリシークラス生成
             var policy = Policy.PolicyFactory.Make();
 
-
             return new AdmissionFee(personTypeCondition, policy);
         }
-
-
-
     }
 }
