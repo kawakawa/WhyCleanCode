@@ -9,7 +9,7 @@ namespace App2_2
 {
     /// <summary>
     /// 追加条件（１）実装をリファクタリング
-    /// （HowよりWhatに意図を意識した版）
+    /// （model層を意識した版）
     /// </summary>
     public class MainClass
     {

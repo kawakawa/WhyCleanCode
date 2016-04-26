@@ -4,7 +4,7 @@ namespace App1_2
 {
     /// <summary>
     /// 基本情報を実装
-    /// （HowよりWhatに意図を意識した版）
+    /// （model層を意識した版）
     /// </summary>
     public class MainClass
     {
