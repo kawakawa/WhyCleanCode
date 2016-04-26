@@ -59,6 +59,7 @@
     <Compile Include="AdmissionFee\Conditions\VisitHistory\VisitHistory.cs" />
     <Compile Include="AdmissionFee\Conditions\VisitHistory\VisitHistoryFactory.cs" />
     <Compile Include="AdmissionFee\Policy\Policy.cs" />
+    <Compile Include="AdmissionFee\Policy\PolicyFactory.cs" />
     <Compile Include="Clock.cs" />
     <Compile Include="ComplimentaryTickets.cs" />
     <Compile Include="MainClass.cs" />

@@ -1,30 +1,11 @@
 ﻿using App3_2.AdmissionFee.Conditions.Clock;
 using App3_2.AdmissionFee.Conditions.PersonType;
+using App3_2.AdmissionFee.Policy;
 
 namespace App3_2.AdmissionFee
 {
     internal class AdmissionFeeFactiory
     {
-
-        /// <summary>
-        /// 条件クラス生成
-        /// </summary>
-        /// <returns></returns>
-        private static Conditions.Conditions MakeConditions()
-        {
-            return new Conditions.Conditions();
-        }
-
-        /// <summary>
-        /// ポリシークラス生成
-        /// </summary>
-        /// <returns></returns>
-        private static Policy.Policy PolicyFactory()
-        {
-            return new Policy.Policy();
-        }
-
-
         /// <summary>
         /// 入場料クラス生成
         /// </summary>
@@ -32,13 +13,13 @@ namespace App3_2.AdmissionFee
         /// <returns></returns>
         public static AdmissionFee Make(PersonType personType)
         {
-            var conditions = MakeConditions();
+            var conditions = MakeConditionsFactory();
 
             //入場者タイプの条件作成
             conditions.PersonType = PersonTypeFactory.Make(personType);
 
             //入場料のポリシー作成
-            var policy = PolicyFactory();
+            var policy = PolicyFactory.Make();
 
             return new AdmissionFee(conditions, policy);
         }
@@ -51,8 +32,8 @@ namespace App3_2.AdmissionFee
         /// <returns></returns>
         internal static AdmissionFee Make(PersonType personType, Clock clock)
         {
-            var conditions = MakeConditions();
-            
+            var conditions = MakeConditionsFactory();
+
             //入場者タイプの条件作成
             conditions.PersonType = PersonTypeFactory.Make(personType);
 
@@ -60,11 +41,21 @@ namespace App3_2.AdmissionFee
             conditions.Clock = ClockFactory.Make(clock);
 
             //入場料のポリシー作成
-            var policy = PolicyFactory();
+            var policy = PolicyFactory.Make();
 
 
             return new AdmissionFee(conditions, policy);
         }
+
+        /// <summary>
+        /// 条件クラス生成
+        /// </summary>
+        /// <returns></returns>
+        private static Conditions.Conditions MakeConditionsFactory()
+        {
+            return new Conditions.Conditions();
+        }
+
 
 
     }

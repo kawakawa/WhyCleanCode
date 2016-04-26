@@ -8,7 +8,7 @@ namespace App4_2.AdmissionFee.Policy
     /// <summary>
     /// 入場料Policy…条件により入場料を決定する
     /// </summary>
-    internal class Policy
+    public class Policy
     {
         /// <summary>
         /// 条件が入場者種別（Type)のみの場合での入場料取得

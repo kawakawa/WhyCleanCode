@@ -3,7 +3,7 @@
     /// <summary>
     /// 入場者種別（Type)の条件用インターフェース
     /// </summary>
-    internal interface IPersonType
+    public interface IPersonType
     {
         //通常時の入場料
         int Fee();

@@ -4,30 +4,21 @@ namespace App1_2.AdmissionFee
 {
     internal class AdmissionFeeFactiory
     {
-
-        /// <summary>
-        /// ポリシークラス生成
-        /// </summary>
-        /// <returns></returns>
-        private static Policy.Policy PolicyFactory()
-        {
-            return new Policy.Policy();
-        }
-
         /// <summary>
         /// 入場料クラス生成
         /// </summary>
         /// <param name="personType">入場者タイプ</param>
         /// <returns></returns>
-        public static AdmissionFee Make(PersonType personType)
+        internal static AdmissionFee Make(PersonType personType)
         {
-            //入場者タイプの条件作成
+            //入場の条件クラス作成
             var personTypeCondition = PersonTypeFactory.Make(personType);
-            
-            //入場料のポリシー作成
-            var policy = PolicyFactory();
 
-            return new AdmissionFee(personTypeCondition,policy);
+            //入場料のポリシークラス生成
+            var policy = Policy.PolicyFactory.Make();
+
+
+            return new AdmissionFee(personTypeCondition, policy);
         }
 
 

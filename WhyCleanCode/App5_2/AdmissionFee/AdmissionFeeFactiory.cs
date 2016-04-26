@@ -1,33 +1,13 @@
-﻿using System;
-using App5_2.AdmissionFee.Conditions.Clock;
+﻿using App5_2.AdmissionFee.Conditions.Clock;
 using App5_2.AdmissionFee.Conditions.ComplimentaryTickets;
 using App5_2.AdmissionFee.Conditions.PersonType;
 using App5_2.AdmissionFee.Conditions.VisitHistory;
+using App5_2.AdmissionFee.Policy;
 
 namespace App5_2.AdmissionFee
 {
     internal class AdmissionFeeFactiory
     {
-
-        /// <summary>
-        /// 条件クラス生成
-        /// </summary>
-        /// <returns></returns>
-        private static Conditions.Conditions MakeConditions()
-        {
-            return new Conditions.Conditions();
-        }
-
-        /// <summary>
-        /// ポリシークラス生成
-        /// </summary>
-        /// <returns></returns>
-        private static Policy.Policy PolicyFactory()
-        {
-            return new Policy.Policy();
-        }
-
-
         /// <summary>
         /// 入場料クラス生成
         /// </summary>
@@ -35,18 +15,16 @@ namespace App5_2.AdmissionFee
         /// <returns></returns>
         public static AdmissionFee Make(PersonType personType)
         {
-            var conditions = MakeConditions();
+            var conditions = MakeConditionsFactory();
 
             //入場者タイプの条件作成
             conditions.PersonType = PersonTypeFactory.Make(personType);
 
             //入場料のポリシー作成
-            var policy = PolicyFactory();
+            var policy = PolicyFactory.Make();
 
             return new AdmissionFee(conditions, policy);
         }
-
-
 
 
         /// <summary>
@@ -57,8 +35,8 @@ namespace App5_2.AdmissionFee
         /// <returns></returns>
         internal static AdmissionFee Make(PersonType personType, Clock clock)
         {
-            var conditions = MakeConditions();
-            
+            var conditions = MakeConditionsFactory();
+
             //入場者タイプの条件作成
             conditions.PersonType = PersonTypeFactory.Make(personType);
 
@@ -66,7 +44,7 @@ namespace App5_2.AdmissionFee
             conditions.Clock = ClockFactory.Make(clock);
 
             //入場料のポリシー作成
-            var policy = PolicyFactory();
+            var policy = PolicyFactory.Make();
 
             return new AdmissionFee(conditions, policy);
         }
@@ -80,7 +58,7 @@ namespace App5_2.AdmissionFee
         /// <returns></returns>
         internal static AdmissionFee Make(PersonType personType, Clock clock, ComplimentaryTickets complimentaryTickets)
         {
-            var conditions = MakeConditions();
+            var conditions = MakeConditionsFactory();
 
             //入場者タイプの条件作成
             conditions.PersonType = PersonTypeFactory.Make(personType);
@@ -92,7 +70,7 @@ namespace App5_2.AdmissionFee
             conditions.ComplimentaryTickets = ComplimentaryTicketsFactory.Make(complimentaryTickets);
 
             //入場料のポリシー作成
-            var policy = PolicyFactory();
+            var policy = PolicyFactory.Make();
 
             return new AdmissionFee(conditions, policy);
         }
@@ -106,9 +84,10 @@ namespace App5_2.AdmissionFee
         /// <param name="complimentaryTickets">優待チケット情報</param>
         /// <param name="visitHistory"></param>
         /// <returns></returns>
-        internal static AdmissionFee Make(PersonType personType, Clock clock, ComplimentaryTickets complimentaryTickets, VisitHistory visitHistory)
+        internal static AdmissionFee Make(PersonType personType, Clock clock, ComplimentaryTickets complimentaryTickets,
+            VisitHistory visitHistory)
         {
-            var conditions = MakeConditions();
+            var conditions = MakeConditionsFactory();
 
             //入場者タイプの条件作成
             conditions.PersonType = PersonTypeFactory.Make(personType);
@@ -120,12 +99,23 @@ namespace App5_2.AdmissionFee
             conditions.ComplimentaryTickets = ComplimentaryTicketsFactory.Make(complimentaryTickets);
 
             //訪問履歴の条件生成
-            conditions.VisitHistory=VisitHistoryFactory.Make(visitHistory,clock);
+            conditions.VisitHistory = VisitHistoryFactory.Make(visitHistory, clock);
 
             //入場料のポリシー作成
-            var policy = PolicyFactory();
+            var policy = PolicyFactory.Make();
 
             return new AdmissionFee(conditions, policy);
         }
+
+        /// <summary>
+        /// 条件クラス生成
+        /// </summary>
+        /// <returns></returns>
+        private static Conditions.Conditions MakeConditionsFactory()
+        {
+            return new Conditions.Conditions();
+        }
+
+
     }
 }

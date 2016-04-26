@@ -52,6 +52,7 @@
     <Compile Include="AdmissionFee\Conditions\PersonType\子供.cs" />
     <Compile Include="AdmissionFee\Conditions\PersonType\学生.cs" />
     <Compile Include="AdmissionFee\Policy\Policy.cs" />
+    <Compile Include="AdmissionFee\Policy\PolicyFactory.cs" />
     <Compile Include="Clock.cs" />
     <Compile Include="MainClass.cs" />
     <Compile Include="PersonType.cs" />
