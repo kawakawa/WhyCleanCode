@@ -3,7 +3,7 @@
 namespace App3_2.AdmissionFee.Conditions.PersonType
 {
     /// <summary>
-    /// 入場者種別（Type)の状態Object作成
+    /// 入場者種別（Type)の条件Object作成
     /// </summary>
     internal class PersonTypeFactory
     {

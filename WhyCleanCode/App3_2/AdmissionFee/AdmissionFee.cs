@@ -10,7 +10,7 @@ namespace App3_2.AdmissionFee
 
 
         /// <summary>
-        /// 状態クラス
+        /// 条件クラス
         /// </summary>
         private readonly Conditions.Conditions _conditions;
         
@@ -25,7 +25,7 @@ namespace App3_2.AdmissionFee
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        /// <param name="conditions">状態クラス</param>
+        /// <param name="conditions">条件クラス</param>
         /// <param name="policy">入場料ポリシー</param>
         public AdmissionFee(Conditions.Conditions conditions,Policy.Policy policy)
         {
@@ -50,7 +50,7 @@ namespace App3_2.AdmissionFee
                 return _policy.GetFee(_conditions.PersonType);
 
 
-            //該当する状態がなかった
+            //該当する条件がなかった
             throw new ArgumentOutOfRangeException(nameof(_conditions), _conditions, null);
         }
     }

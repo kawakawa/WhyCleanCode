@@ -7,7 +7,7 @@ namespace App2_2.AdmissionFee
     {
 
         /// <summary>
-        /// 状態クラス生成
+        /// 条件クラス生成
         /// </summary>
         /// <returns></returns>
         private static Conditions.Conditions MakeConditions()

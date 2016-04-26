@@ -8,7 +8,7 @@ namespace App1_2.AdmissionFee
     internal class AdmissionFee
     {
         /// <summary>
-        /// 入場者種別（type）ごとの状態
+        /// 入場者種別（type）ごとの条件
         /// </summary>
         private readonly IPersonType _personTypeCondition;
 
@@ -22,7 +22,7 @@ namespace App1_2.AdmissionFee
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        /// <param name="personTypePersonTypeCondition">入場者種別（type）ごとの状態</param>
+        /// <param name="personTypePersonTypeCondition">入場者種別（type）ごとの条件</param>
         /// <param name="policy">入場料ポリシー</param>
         public AdmissionFee(IPersonType personTypePersonTypeCondition, Policy.Policy policy)
         {
