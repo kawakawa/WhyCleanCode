@@ -16,7 +16,7 @@ namespace App5_2.AdmissionFee.Conditions.VisitHistory
         /// <param name="visitHistory">訪問履歴</param>
         /// <param name="clock">時刻</param>
         /// <returns>訪問履歴条件クラス</returns>
-        internal static IVisitHistory Make(App5_2.VisitHistory visitHistory, App5_2.Clock clock)
+        internal static IVisitHistory Create(App5_2.VisitHistory visitHistory, App5_2.Clock clock)
         {
             return new VisitHistory(visitHistory,clock);
         }

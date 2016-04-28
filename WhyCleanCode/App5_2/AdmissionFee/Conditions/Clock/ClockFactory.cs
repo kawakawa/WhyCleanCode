@@ -7,7 +7,7 @@
         /// </summary>
         /// <param name="clock">ドメイン時計</param>
         /// <returns>時刻条件クラス</returns>
-        public static IClock Make(App5_2.Clock clock)
+        public static IClock Create(App5_2.Clock clock)
         {
             return new Clock(clock);
         }

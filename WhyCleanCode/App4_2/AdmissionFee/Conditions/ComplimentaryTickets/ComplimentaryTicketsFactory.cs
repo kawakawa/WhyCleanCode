@@ -13,7 +13,7 @@ namespace App4_2.AdmissionFee.Conditions.ComplimentaryTickets
         /// </summary>
         /// <param name="complimentaryTickets">優待チケット情報</param>
         /// <returns>優待チケット条件クラス</returns>
-        internal static IComplimentaryTickets Make(App4_2.ComplimentaryTickets complimentaryTickets)
+        internal static IComplimentaryTickets Create(App4_2.ComplimentaryTickets complimentaryTickets)
         {
             return new ComplimentaryTickets(complimentaryTickets);
         }

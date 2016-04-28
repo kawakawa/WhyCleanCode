@@ -6,7 +6,7 @@
         /// 入場料のポリシークラス生成
         /// </summary>
         /// <returns></returns>
-        public static Policy Make()
+        public static Policy Create()
         {
             return new Policy();
         }

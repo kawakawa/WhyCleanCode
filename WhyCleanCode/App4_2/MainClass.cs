@@ -18,7 +18,7 @@ namespace App4_2
         public int AdmissionFee(PersonType personType, Clock clock,ComplimentaryTickets complimentaryTickets)
         {
             //入場料クラス生成
-            var admissionFee = AdmissionFeeFactiory.Make(personType, clock, complimentaryTickets);
+            var admissionFee = AdmissionFeeFactiory.Create(personType, clock, complimentaryTickets);
 
             //入場料取得
             return admissionFee.GetFee();

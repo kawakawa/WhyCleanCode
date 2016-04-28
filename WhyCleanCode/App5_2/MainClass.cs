@@ -19,7 +19,7 @@ namespace App5_2
         public int AdmissionFee(PersonType personType, Clock clock,ComplimentaryTickets complimentaryTickets,VisitHistory visitHistory)
         {
             //入場料クラス生成
-            var admissionFee = AdmissionFeeFactiory.Make(personType, clock, complimentaryTickets,visitHistory);
+            var admissionFee = AdmissionFeeFactiory.Create(personType, clock, complimentaryTickets,visitHistory);
 
             //入場料取得
             return admissionFee.GetFee();

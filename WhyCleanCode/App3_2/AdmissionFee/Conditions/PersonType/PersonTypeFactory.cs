@@ -7,7 +7,7 @@ namespace App3_2.AdmissionFee.Conditions.PersonType
     /// </summary>
     internal class PersonTypeFactory
     {
-        public static IPersonType Make(App3_2.PersonType personType)
+        public static IPersonType Create(App3_2.PersonType personType)
         {
             switch (personType)
             {

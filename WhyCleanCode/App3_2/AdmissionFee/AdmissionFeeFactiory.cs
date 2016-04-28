@@ -11,15 +11,15 @@ namespace App3_2.AdmissionFee
         /// </summary>
         /// <param name="personType">入場者タイプ</param>
         /// <returns></returns>
-        public static AdmissionFee Make(PersonType personType)
+        public static AdmissionFee Create(PersonType personType)
         {
-            var conditions = MakeConditionsFactory();
+            var conditions = CreateConditionsFactory();
 
             //入場者タイプの条件作成
-            conditions.PersonType = PersonTypeFactory.Make(personType);
+            conditions.PersonType = PersonTypeFactory.Create(personType);
 
             //入場料のポリシー作成
-            var policy = PolicyFactory.Make();
+            var policy = PolicyFactory.Create();
 
             return new AdmissionFee(conditions, policy);
         }
@@ -30,18 +30,18 @@ namespace App3_2.AdmissionFee
         /// <param name="personType">入場者タイプ</param>
         /// <param name="clock">ドメイン時計</param>
         /// <returns></returns>
-        internal static AdmissionFee Make(PersonType personType, Clock clock)
+        internal static AdmissionFee Create(PersonType personType, Clock clock)
         {
-            var conditions = MakeConditionsFactory();
+            var conditions = CreateConditionsFactory();
 
             //入場者タイプの条件作成
-            conditions.PersonType = PersonTypeFactory.Make(personType);
+            conditions.PersonType = PersonTypeFactory.Create(personType);
 
             //時刻の条件作成
-            conditions.Clock = ClockFactory.Make(clock);
+            conditions.Clock = ClockFactory.Create(clock);
 
             //入場料のポリシー作成
-            var policy = PolicyFactory.Make();
+            var policy = PolicyFactory.Create();
 
 
             return new AdmissionFee(conditions, policy);
@@ -51,7 +51,7 @@ namespace App3_2.AdmissionFee
         /// 条件クラス生成
         /// </summary>
         /// <returns></returns>
-        private static Conditions.Conditions MakeConditionsFactory()
+        private static Conditions.Conditions CreateConditionsFactory()
         {
             return new Conditions.Conditions();
         }
