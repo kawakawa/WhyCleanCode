@@ -46,6 +46,7 @@
     <Compile Include="AdmissionFee\Conditions\Clock\ClockFactory.cs" />
     <Compile Include="AdmissionFee\Conditions\Clock\IClock.cs" />
     <Compile Include="AdmissionFee\Conditions\Conditions.cs" />
+    <Compile Include="AdmissionFee\Conditions\ConditionsFactory.cs" />
     <Compile Include="AdmissionFee\Conditions\PersonType\IPersonType.cs" />
     <Compile Include="AdmissionFee\Conditions\PersonType\PersonTypeFactory.cs" />
     <Compile Include="AdmissionFee\Conditions\PersonType\大人.cs" />

@@ -42,12 +42,12 @@ namespace App2_2.AdmissionFee
         public int GetFee()
         {
             //入場者種別（Type)、時間
-            if (_conditions.PersonType != null && _conditions.Clock != null)
-                return _policy.GetFee(_conditions.PersonType, _conditions.Clock);
+            if (_conditions.HasPersonTypeCondition() && _conditions.HasClockTypeCondition())
+                return _policy.GetFee(_conditions.PersonTypeCondition(), _conditions.ClockCondition());
 
             //入場者種別（Type)
-            if (_conditions.PersonType!=null)
-                return _policy.GetFee(_conditions.PersonType);
+            if (_conditions.HasPersonTypeCondition())
+                return _policy.GetFee(_conditions.PersonTypeCondition());
 
 
             //該当する条件がなかった

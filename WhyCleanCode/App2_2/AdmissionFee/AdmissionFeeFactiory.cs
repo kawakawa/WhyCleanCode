@@ -14,7 +14,7 @@ namespace App2_2.AdmissionFee
         public static AdmissionFee Create(PersonType personType)
         {
             //入場料の条件作成
-            var conditions = CreateConditionsFactory(personType);
+            var conditions = Conditions.ConditionsFactory.Create(personType);
 
             //入場料のポリシー作成
             var policy = PolicyFactory.Create();
@@ -31,45 +31,16 @@ namespace App2_2.AdmissionFee
         /// <returns></returns>
         internal static AdmissionFee Create(PersonType personType, Clock clock)
         {
-            var conditions = CreateConditionsFactory();
-
-            //入場者タイプの条件作成
-            conditions.PersonType = PersonTypeFactory.Create(personType);
-
-            //時刻の条件作成
-            conditions.Clock = ClockFactory.Create(clock);
+            //入場料の条件作成
+            var conditions = Conditions.ConditionsFactory.Create(personType, clock);
 
             //入場料のポリシー作成
             var policy = PolicyFactory.Create();
-
 
             return new AdmissionFee(conditions, policy);
         }
 
 
-        /// <summary>
-        /// 条件クラス生成
-        /// </summary>
-        /// <returns></returns>
-        private static Conditions.Conditions CreateConditionsFactory()
-        {
-            return new Conditions.Conditions();
-        }
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="personType"></param>
-        /// <returns></returns>
-        private static Conditions.Conditions CreateConditionsFactory(PersonType personType)
-        {
-            var conditions = CreateConditionsFactory();
-
-            //入場者タイプの条件作成
-            conditions.PersonType = PersonTypeFactory.Create(personType);
-
-            return conditions;
-        }
 
 
 
